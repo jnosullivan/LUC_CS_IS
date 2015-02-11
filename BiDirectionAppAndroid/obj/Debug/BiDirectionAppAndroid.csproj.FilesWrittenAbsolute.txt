@@ -1,0 +1,13 @@
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/obj/Debug/MonoAndroid,Version=v4.4.AssemblyAttribute.cs
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/bin/Debug/BiDirectionAppAndroid.dll.mdb
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/bin/Debug/BiDirectionAppAndroid.dll
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/bin/Debug/BiDirectionAppAndroid.BiDirectionAppAndroid.apk
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/obj/Debug/android/bin/BiDirectionAppAndroid.BiDirectionAppAndroid.apk
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/obj/Debug/res/layout/main.xml
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/obj/Debug/res/values/strings.xml
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/obj/Debug/res/drawable/icon.png
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/obj/Debug/R.cs.flag
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/bin/Debug/BiDirectionAppAndroid.BiDirectionAppAndroid-Signed.apk
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/obj/Debug/uploadflags.txt
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/obj/Debug/BiDirectionAppAndroid.dll
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionAppAndroid/obj/Debug/BiDirectionAppAndroid.dll.mdb

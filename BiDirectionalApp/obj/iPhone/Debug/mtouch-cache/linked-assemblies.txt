@@ -1,0 +1,5 @@
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionalApp/obj/iPhone/Debug/mtouch-cache/Link/monotouch.dll
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionalApp/obj/iPhone/Debug/mtouch-cache/Link/System.dll
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionalApp/obj/iPhone/Debug/mtouch-cache/Link/mscorlib.dll
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionalApp/obj/iPhone/Debug/mtouch-cache/Link/System.Core.dll
+/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionalApp/obj/iPhone/Debug/mtouch-cache/Link/BiDirectionalApp.exe

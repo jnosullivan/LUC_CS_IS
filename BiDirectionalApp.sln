@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiDirectionalApp", "BiDirectionalApp\BiDirectionalApp.csproj", "{ABDF3DEE-C408-487E-871D-3002A54399E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiDirectionAppAndroid", "BiDirectionAppAndroid\BiDirectionAppAndroid.csproj", "{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABDF3DEE-C408-487E-871D-3002A54399E6}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{ABDF3DEE-C408-487E-871D-3002A54399E6}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{ABDF3DEE-C408-487E-871D-3002A54399E6}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{ABDF3DEE-C408-487E-871D-3002A54399E6}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{ABDF3DEE-C408-487E-871D-3002A54399E6}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{ABDF3DEE-C408-487E-871D-3002A54399E6}.Debug|iPhone.Build.0 = Debug|iPhone
+		{ABDF3DEE-C408-487E-871D-3002A54399E6}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{ABDF3DEE-C408-487E-871D-3002A54399E6}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{ABDF3DEE-C408-487E-871D-3002A54399E6}.Release|iPhone.ActiveCfg = Release|iPhone
+		{ABDF3DEE-C408-487E-871D-3002A54399E6}.Release|iPhone.Build.0 = Release|iPhone
+		{ABDF3DEE-C408-487E-871D-3002A54399E6}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{ABDF3DEE-C408-487E-871D-3002A54399E6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}.Release|iPhone.Build.0 = Release|Any CPU
+		{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{F9E305CB-4C0A-4A60-9F3E-594C727F4AED}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = BiDirectionalApp\BiDirectionalApp.csproj
+	EndGlobalSection
+EndGlobal
