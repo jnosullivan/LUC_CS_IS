@@ -100,7 +100,6 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="ViewController\HomeScreen.cs" />
-    <None Include="README.md" />
     <Compile Include="ViewController\TableItem.cs" />
     <Compile Include="ViewController\TableSource.cs" />
   </ItemGroup>
