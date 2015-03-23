@@ -114,16 +114,41 @@ namespace BiDirectionalApp
 
 		}
 		partial void thenext (UIBarButtonItem sender) {
-			Run();
+
+			if (TextField.Text == "BiDirectional") { Run(); }
+
+			
+
 		}
 		partial void add (UIBarButtonItem sender) {
 
-			string[] data = { "a", "b", "c","d","e","f","g","h","i","j","k"};
+			if (TextField.Text == "BiDirectional") {
 
-			foreach (string value in data)
-			{
-				algo.addNode(value);
+			var del = (AppDelegate)UIApplication.SharedApplication.Delegate;
+
+			var items = del.dataItems;
+
+			List<String> ls = new List<String>(); 
+
+			foreach (String item in items) {
+
+
+				List<String> objects = item.Split(' ').ToList<String>();
+
+
+
+				if (!ls.Contains(objects[0])) { ls.Add(objects[0]); }
+
+				if (!ls.Contains(objects[1])) { ls.Add(objects[1]); }
+
 			}
+
+			foreach (String node in ls) {
+				algo.addNode(node);
+			}
+
+			}
+
 
 		}
 
@@ -186,18 +211,7 @@ namespace BiDirectionalApp
 			task = new Problem();
 
 
-
-
-			//ViewTempTag = 0;
-			var documents =
-				Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments);
-			var filename = Path.Combine (documents, "test.txt");
-			File.WriteAllText(filename, "a c 100\na b 50\na f 200\na e 250\nb c 150\ne i 110\ne f 155\nf c 180\nf g 190\ng c 120\ng h 100\nc h 120\nc d 200\nd h 150\nh l 140\ng l 50\nj k 200\ni l 500\nf k 100\ne j 300");
-
-			//"e","f","g","h","i","j","k"
-			//var text = System.IO.File.ReadAllText("TestData/test.txt");
-			setGraph (filename);
-			setProblem ("a","j");
+		
 			// Configure the page view controller and add it as a child view controller.
 			PageViewController = new UIPageViewController (UIPageViewControllerTransitionStyle.PageCurl, UIPageViewControllerNavigationOrientation.Horizontal, UIPageViewControllerSpineLocation.Min);
 			PageViewController.WeakDelegate = this;
@@ -308,9 +322,75 @@ namespace BiDirectionalApp
 		{
 			//throw new NotImplementedException ();
 
+			if (TextField.Text == "BiDirectional") {
 
+			Console.WriteLine(TextField.Text);
+
+			var view = new UINavigationController(new HomeScreen());
+
+			PresentViewController(view, animated: true, completionHandler: () =>
+				{
+
+					
+				});
+
+			}
+
+
+		}
+
+		partial void UIButton205_TouchUpInside (UIButton sender) {
+
+
+			if (TextField.Text == "BiDirectional") {
+
+			Console.WriteLine("Sets Problem");
+
+			var del = (AppDelegate)UIApplication.SharedApplication.Delegate;
+
+			List<String> items = del.dataItems;
+
+			var data = "";  
+
+			bool firstelement = true;
+
+			foreach (String item in items) {
+
+
+				if (firstelement) { 
+
+					data += item; 
+				
+					firstelement = false;
+				
+				} else {
+
+					data += "\n";
+
+					data += item;
+
+				}
+			
+
+			}
+
+
+			var documents =
+				Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments);
+			var filename = Path.Combine (documents, "test.txt");
+			File.WriteAllText(filename, data);
+
+			//"e","f","g","h","i","j","k"
+			//var text = System.IO.File.ReadAllText("TestData/test.txt");
+			setGraph (filename);
+			setProblem (a.Text,b.Text); 
+
+			}
 
 		}
 	}
 }
+
+//"a c 100\na b 50\na f 200\na e 250\nb c 150\ne i 110\ne f 155\nf c 180\nf g 190\ng c 120\ng h 100\nc h 120\nc d 200\nd h 150\nh l 140\ng l 50\nj k 200\ni l 500\nf k 100\ne j 300"
+
 

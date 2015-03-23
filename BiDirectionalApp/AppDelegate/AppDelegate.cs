@@ -18,7 +18,11 @@ namespace BiDirectionalApp
 		//protected Graph graph;
 		//Problem task;
 		//Algorism algo;
-		//bool isdone = false;
+		//public bool isdone = false;
+
+		public List<String> dataItems = new List<String>();
+
+
 		public override UIWindow Window {
 			get;
 			set;
@@ -50,6 +54,8 @@ namespace BiDirectionalApp
 				Run ();
 			}
 */
+
+
 			Console.WriteLine("Done with working!");
 			return true;
 		}

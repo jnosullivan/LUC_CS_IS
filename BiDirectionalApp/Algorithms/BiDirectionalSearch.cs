@@ -19,7 +19,7 @@ namespace BiDirectionalApp
 		public Queue<List<Edge>> forwards;
 		//The list that contains all the edge going backwards direction
 		public Queue<List<Edge>> backwards;
-		//Contains the check edge going forwards
+		//Contains the cxwwwheck edge going forwards
 		public HashSet<string> checkedforwards;
 		//Contains the check edge going backwards
 		public HashSet<string> checkedbackwards;

@@ -42,6 +42,10 @@ namespace BiDirectionalApp
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void UIButton204_TouchUpInside (UIButton sender);
 
+		[Action ("UIButton205_TouchUpInside:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void UIButton205_TouchUpInside (UIButton sender);
+
 		void ReleaseDesignerOutlets ()
 		{
 		}

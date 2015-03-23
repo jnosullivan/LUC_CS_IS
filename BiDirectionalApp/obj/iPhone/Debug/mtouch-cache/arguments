@@ -24,6 +24,6 @@
 	-sdk \
 	8.1 \
 	-targetver \
-	7.0 \
+	8.0 \
 	--abi=armv7 \
 	/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionalApp/bin/iPhone/Debug/BiDirectionalApp.exe \

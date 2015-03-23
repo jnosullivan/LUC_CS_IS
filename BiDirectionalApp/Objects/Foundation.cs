@@ -15,9 +15,9 @@ namespace BiDirectionalApp
 	public class Foundation : UIView
 	{
 
-		 bool runnning = false;
+		bool runnning = false;
 
-		 bool completed = false;
+		bool completed = false;
 
 		bool switcher = true;
 
@@ -33,7 +33,7 @@ namespace BiDirectionalApp
 
 		public Dictionary<String,int> ar = new Dictionary<String,int>(); 
 
-		public Foundation ()
+		public Foundation () 
 		{
 			this.Frame = new RectangleF(0, 0, 500, 500);
 
