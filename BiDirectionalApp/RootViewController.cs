@@ -37,8 +37,35 @@ namespace BiDirectionalApp
 		public RootViewController (IntPtr handle) : base (handle)
 		{
 			ModelController = new ModelController ();
+			NSNotificationCenter.DefaultCenter.AddObserver ("CallAlertWeight", CallAlertWeight);
 		}
 			
+		public void CallAlertWeight(NSNotification notification)
+		{
+			UIAlertController alert = UIAlertController.Create ("Create Data", "Format: \n 'a b 130' ", UIAlertControllerStyle.Alert);
+
+			alert.AddAction (UIAlertAction.Create ("Add", UIAlertActionStyle.Default, action => {
+				// This code is invoked when the user taps on login, and this shows how to access the field values
+				var del = (AppDelegate)UIApplication.SharedApplication.Delegate;
+
+				algo.reMoveHighlight();
+
+				string ads = del.nodeA + " " + del.nodeB + " " +  alert.TextFields[0].Text;
+				Console.WriteLine(ads);
+				del.dataItems.Add(ads);
+
+				del.nodeA = "";
+				del.nodeB = "";
+
+				algo.drawHighlight();
+			}));
+
+			alert.AddTextField ((field) => {
+				field.Placeholder = "data";
+			});
+
+			PresentViewController (alert, animated: true, completionHandler: null);
+		}
 
 		public ModelController ModelController {
 			get;
@@ -120,8 +147,12 @@ namespace BiDirectionalApp
 			
 
 		}
+
+
+
 		partial void add (UIBarButtonItem sender) {
 
+			/*
 			if (TextField.Text == "BiDirectional") {
 
 			var del = (AppDelegate)UIApplication.SharedApplication.Delegate;
@@ -148,6 +179,19 @@ namespace BiDirectionalApp
 			}
 
 			}
+			*/
+			UIAlertController alert = UIAlertController.Create ("Create Node", "Enter the node name:", UIAlertControllerStyle.Alert);
+
+			alert.AddAction (UIAlertAction.Create ("Add", UIAlertActionStyle.Default, action => {
+				// This code is invoked when the user taps on login, and this shows how to access the field values
+				algo.addNode(alert.TextFields[0].Text);
+			}));
+
+			alert.AddTextField ((field) => {
+				field.Placeholder = "data";
+			});
+
+			PresentViewController (alert, animated: true, completionHandler: null);
 
 
 		}
@@ -317,13 +361,17 @@ namespace BiDirectionalApp
 
 			return UIPageViewControllerSpineLocation.Mid;
 		}
+		partial void UIButton206_TouchUpInside (UIButton sender) {
 
+
+		}
 		partial void UIButton204_TouchUpInside (UIButton sender)
 		{
 			//throw new NotImplementedException ();
-
+			//Console.WriteLine("jhg");
 			if (TextField.Text == "BiDirectional") {
 
+				/*
 			Console.WriteLine(TextField.Text);
 
 			var view = new UINavigationController(new HomeScreen());
@@ -333,7 +381,13 @@ namespace BiDirectionalApp
 
 					
 				});
+				*/
+				var del = (AppDelegate)UIApplication.SharedApplication.Delegate;
+				del.dataItems.Clear();
+				a.Text = "";
 
+				b.Text = "";
+				algo.clearproblem();
 			}
 
 
@@ -341,6 +395,7 @@ namespace BiDirectionalApp
 
 		partial void UIButton205_TouchUpInside (UIButton sender) {
 
+			algo.linking = false;
 
 			if (TextField.Text == "BiDirectional") {
 

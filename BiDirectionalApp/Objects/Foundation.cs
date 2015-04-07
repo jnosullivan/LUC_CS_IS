@@ -19,6 +19,8 @@ namespace BiDirectionalApp
 
 		bool completed = false;
 
+		public bool linking = false;
+
 		bool switcher = true;
 
 		Problem problem;
@@ -31,6 +33,8 @@ namespace BiDirectionalApp
 
 		List<Edge> done;
 
+		List<int> tempids = new List<int>();
+
 		public Dictionary<String,int> ar = new Dictionary<String,int>(); 
 
 		public Foundation () 
@@ -40,6 +44,34 @@ namespace BiDirectionalApp
 			this.BackgroundColor = UIColor.DarkGray;
 		}
 
+		public void clearproblem() {
+
+			 runnning = false;
+
+			 completed = false;
+
+			 linking = false;
+
+			 switcher = true;
+
+			foreach (var selectedview in this.Subviews) {
+
+				selectedview.RemoveFromSuperview ();
+
+
+			}
+
+			ar.Clear ();
+
+			done.Clear ();
+
+			tempids.Clear ();
+
+			ViewTempTag = 0;
+
+			SetNeedsDisplay();
+
+		}
 
 		public void addNode(string value) {
 
@@ -87,13 +119,73 @@ namespace BiDirectionalApp
 				}
 			});
 
+			newView.AddGestureRecognizer(new UITapGestureRecognizer((gesture) => {
+
+				Console.WriteLine("FOUNC: " + value);
+
+				var del = (AppDelegate)UIApplication.SharedApplication.Delegate;
+
+
+
+				if (del.Compare(value)) {
+					Console.WriteLine("Prompt User for input");
+
+					getInput();
+
+				} else {
+
+				}
+
+				newView.BackgroundColor = UIColor.Yellow;
+
+			}));
+
+
+
 			newView.AddGestureRecognizer (panGesture);
 
 			this.Add (newView);
 		}
 
 
+		public void drawHighlight() {
 
+
+			linking = true;
+
+			SetNeedsDisplay();
+		}
+
+		public void reMoveHighlight() {
+
+
+			var del = (AppDelegate)UIApplication.SharedApplication.Delegate;
+
+			int id1 = ar[del.nodeA];
+			tempids.Add (id1);
+
+			int id2 = ar[del.nodeB];
+			tempids.Add (id2);
+
+			foreach (var selectedview in this.Subviews)
+			{
+				if(selectedview.GetType() == typeof(Node)) {
+
+					if (tempids.Contains (selectedview.Tag)) {
+						selectedview.BackgroundColor = UIColor.LightGray;
+					}
+
+				}
+			}
+			tempids.Clear();
+
+		}
+
+		public void getInput() {
+		
+			NSNotificationCenter.DefaultCenter.PostNotificationName("CallAlertWeight", this);
+
+		}
 
 		public override void TouchesBegan (MonoTouch.Foundation.NSSet touches, UIEvent evt)
 		{
@@ -171,7 +263,41 @@ namespace BiDirectionalApp
 			base.Draw (rect);
 
 
+			//if (linking) {
 
+				var del = (AppDelegate)UIApplication.SharedApplication.Delegate;
+
+				var items = del.dataItems;
+
+				foreach (String item in items) {
+
+
+					List<String> objects = item.Split (' ').ToList<String> ();
+
+					int id1 = ar[objects[0]];
+
+					int id2 = ar[objects[1]];
+
+					using(CGContext g = UIGraphics.GetCurrentContext ()){
+
+						g.SetLineWidth (2);
+
+						CGPath path;
+
+						path = new CGPath();
+
+						path.AddLines (getPostion(id1,id2));
+
+						g.SetStrokeColor(UIColor.LightGray.CGColor);
+
+						g.AddPath (path);		
+
+						g.DrawPath (CGPathDrawingMode.Stroke);
+
+					}
+				}
+
+			
 
 			if (runnning) {
 				/*

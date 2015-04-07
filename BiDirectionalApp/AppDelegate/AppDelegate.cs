@@ -20,6 +20,10 @@ namespace BiDirectionalApp
 		//Algorism algo;
 		//public bool isdone = false;
 
+		public string nodeA = "";
+		public string nodeB = "";
+
+
 		public List<String> dataItems = new List<String>();
 
 
@@ -28,10 +32,43 @@ namespace BiDirectionalApp
 			set;
 		}
 
+		public bool Compare(string str) {
+
+
+
+			if (nodeA == "" && nodeB == "") {
+				nodeA = str;
+				Console.WriteLine("NODEA: " + nodeA);
+				Console.WriteLine("NODEA: " + nodeB);
+				return false;
+			}
+
+			if (nodeA == str) {
+				nodeA = str;
+				Console.WriteLine("NODEA: " + nodeA);
+				Console.WriteLine("NODEA: " + nodeB);
+				return false;
+			} else {
+				nodeB = str;
+				Console.WriteLine("NODEA: " + nodeA);
+				Console.WriteLine("NODEA: " + nodeB);
+				return true;
+			}
+
+
+
+			return false;
+		}
+
+	
+
 		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 		{
 			// Override point for customization after application launch.
 			Console.WriteLine("Starting");
+
+
+
 
 			/*
 			algo = new Algorism();
