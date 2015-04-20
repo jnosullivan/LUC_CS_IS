@@ -1,16 +1,16 @@
 # Version: 8.6.0.51 (dfb682f)
-# [first argument, ignore] # /Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionalApp/bin/iPhoneSimulator/Debug/mtouch.exe
+# [first argument, ignore] # /Users/johnosullivan/Desktop/LUC_CS_IS/BiDirectionalApp/bin/iPhoneSimulator/Debug/mtouch.exe
 /Library/Frameworks/Xamarin.iOS.framework/Versions/8.6.0.51/bin/mtouch-64 \
 	-sdkroot \
 	/Applications/Xcode.app/Contents/Developer \
 	--cache \
-	/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionalApp/obj/iPhoneSimulator/Debug/mtouch-cache \
+	/Users/johnosullivan/Desktop/LUC_CS_IS/BiDirectionalApp/obj/iPhoneSimulator/Debug/mtouch-cache \
 	--executable \
 	BiDirectionalApp \
 	--nomanifest \
 	--nosign \
 	-sim \
-	/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionalApp/bin/iPhoneSimulator/Debug/BiDirectionalApp.app \
+	/Users/johnosullivan/Desktop/LUC_CS_IS/BiDirectionalApp/bin/iPhoneSimulator/Debug/BiDirectionalApp.app \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.dll \
 	-r \
@@ -22,10 +22,10 @@
 	-debug \
 	-nolink \
 	-sdk \
-	8.2 \
+	8.3 \
 	-targetver \
 	8.0 \
 	--abi=i386 \
 	--gcc_flags \
-	"-Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker \"/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionalApp/bin/iPhoneSimulator/Debug/BiDirectionalApp.xcent\"" \
-	/Users/johnosullivan/Projects/BiDirectionalApp/BiDirectionalApp/bin/iPhoneSimulator/Debug/BiDirectionalApp.exe \
+	"-Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker \"/Users/johnosullivan/Desktop/LUC_CS_IS/BiDirectionalApp/bin/iPhoneSimulator/Debug/BiDirectionalApp.xcent\"" \
+	/Users/johnosullivan/Desktop/LUC_CS_IS/BiDirectionalApp/bin/iPhoneSimulator/Debug/BiDirectionalApp.exe \
